@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muusa — AI chord & melody ideas, on your device</title>
+  <meta name="description" content="Muusa sketches a chord progression and melody in seconds, plays it back, and exports MIDI — all on-device with Apple Intelligence.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- Logo: inline SVG rebuilt from the app-icon layers so the squircle
+         background can follow light/dark mode. Glyph colors are fixed. -->
+    <svg class="logo" viewBox="0 0 5805 5805" width="112" height="112" role="img" aria-label="Muusa app icon">
+      <rect class="logo-bg" width="5805" height="5805" rx="1290"/>
+      <path fill="#FF383C" d="M 1983.439087 3429.043701 C 1983.439087 3528.983154 2064.456055 3610 2164.395264 3610 C 2264.334717 3610 2345.351563 3528.983154 2345.351563 3429.043701 L 2345.351563 1850.956299 C 2345.351563 1751.016846 2264.334717 1670 2164.395264 1670 C 2064.456055 1670 1983.439087 1751.016846 1983.439087 1850.956299 Z"/>
+      <path fill="#FF8D28" d="M 2709.184082 3429.043701 C 2709.184082 3528.983154 2790.200928 3610 2890.140381 3610 C 2990.07959 3610 3071.09668 3528.983154 3071.09668 3429.043701 L 3071.09668 1630.526367 C 3071.09668 1530.586914 2990.07959 1449.570313 2890.140381 1449.570313 C 2790.200928 1449.570313 2709.184082 1530.586914 2709.184082 1630.526367 Z"/>
+      <path fill="#0088FF" d="M 3432.049072 3429.043701 C 3432.049072 3528.983154 3513.065918 3610 3613.005371 3610 C 3712.944824 3610 3793.96167 3528.983154 3793.96167 3429.043701 L 3793.96167 1850.956299 C 3793.96167 1751.016846 3712.944824 1670 3613.005371 1670 C 3513.065918 1670 3432.049072 1751.016846 3432.049072 1850.956299 Z"/>
+      <path class="logo-body" fill-rule="evenodd" d="M 2155.155518 4840.700195 C 2155.155518 4971.919922 2261.530518 5078.294922 2392.750488 5078.294922 L 3477.528076 5078.294922 C 3608.748291 5078.294922 3715.123291 4971.919922 3715.123291 4840.700195 L 3622.294434 4610.737305 C 4601.864746 4422.401367 5370.567383 3866.694824 5190 3157.368164 C 5086.003906 2748.838135 4826.948242 2233.154297 4473.52832 1793.918213 C 4488.557617 1794.742676 4503.758789 1795.162842 4519.106445 1795.162842 C 4822.635742 1795.162842 5068.695313 1630.765137 5068.695313 1427.970703 C 5068.695313 1225.175781 4822.635742 1060.777832 4519.106445 1060.777832 C 4215.577148 1060.777832 3969.517822 1225.175781 3969.517822 1427.970703 C 3969.517822 1533.689453 4036.388184 1628.973633 4143.410645 1695.97168 C 4524.847656 2158.360596 4835.916992 2721.998779 4910 3157.368164 C 5038.672852 3913.548828 3979.419189 4007.522217 2891.940186 4007.522217 C 1804.461182 4007.522217 756.567261 3929.07666 910 3177.669922 C 1000.497864 2734.474365 1308.815918 2153.327637 1688.693726 1681.355469 C 1767.197266 1617.863281 1814.362427 1536.436523 1814.362427 1447.649902 C 1814.362427 1244.855469 1568.303223 1080.45752 1264.773804 1080.45752 C 961.244446 1080.45752 715.185242 1244.855469 715.185242 1447.649902 C 715.185242 1650.444824 961.244446 1814.842529 1264.773804 1814.842529 C 1278.714111 1814.842529 1292.533081 1814.49585 1306.212646 1813.814453 C 954.02655 2255.797852 700.22522 2771.731934 590 3177.669922 C 392.947784 3903.375 1219.841675 4458.125 2241.525146 4626.739258 L 2155.155518 4840.700195 Z"/>
+    </svg>
+
+    <!-- Name -->
+    <h1>Muusa</h1>
+
+    <!-- Short description -->
+    <p class="tagline">AI chord &amp; melody ideas, on your device.</p>
+
+    <!-- Screenshot: device- and appearance-aware, set by script; falls back to macOS light -->
+    <div class="shot">
+      <img id="hero-shot" src="assets/macos_light.png" alt="Muusa app screenshot" loading="eager">
+    </div>
+
+    <!-- App Store link: official badge, black on light / white on dark -->
+    <a class="cta" href="https://apps.apple.com/app/id6798142362" id="appstore-link" rel="noopener">
+      <picture>
+        <source srcset="assets/appstore-badge-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="assets/appstore-badge-black.svg" alt="Download on the App Store" height="48">
+      </picture>
+    </a>
+
+    <!-- Longer description (from AppStoreDescription.md) -->
+    <section class="copy">
+      <p>Stuck on a blank track? Muusa sketches a chord progression and melody in seconds, so you can capture an idea while it's fresh and carry it straight into your DAW.</p>
+
+      <p>Type in whatever you have in mind, and Muusa generates a musical starting point — chords first, then a melody that fits them. Hear it play back instantly, then export the whole idea as a MIDI file to finish in Logic, Ableton, GarageBand, or wherever you produce.</p>
+
+      <h2>Built on Apple Intelligence</h2>
+      <p>Muusa runs entirely on the on-device model at the core of Apple Intelligence — no account, no subscription, no cloud. Your ideas never leave your device, it works offline, and there are no usage limits or extra costs.</p>
+
+      <h2>Made to fit your workflow</h2>
+      <ul>
+        <li>Generate chord progressions and melodies from a simple prompt</li>
+        <li>Preview any idea instantly with built-in playback</li>
+        <li>Export to MIDI — on Mac, just drag and drop into your DAW</li>
+        <li>Clean, focused, distraction-free design</li>
+      </ul>
+
+      <p>Muusa isn't here to write your song. It's here to break the blank page — a fast source of inspiration you shape into something of your own.</p>
+
+      <h2>Before you buy</h2>
+      <p>Muusa requires Apple Intelligence, available on supported devices. Before purchasing, please make sure your device supports Apple Intelligence and that it's turned on in Settings.</p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Contact link -->
+    <a class="contact" href="mailto:sami.laakkonen@icloud.com">Contact&nbsp;&amp;&nbsp;Support</a>
+  </footer>
+
+  <script>
+    // Progressive enhancement: pick the screenshot that matches the visitor's
+    // device (iPhone / iPad / desktop) and current light/dark appearance.
+    (function () {
+      var img = document.getElementById("hero-shot");
+
+      function device() {
+        var ua = navigator.userAgent;
+        if (/iPhone|iPod/.test(ua)) return "iphone";
+        // iPadOS reports as "MacIntel" but exposes touch points.
+        if (/iPad/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) return "ipad";
+        return "macos";
+      }
+
+      var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function update() {
+        var dev = device();
+        var mode = darkQuery.matches ? "dark" : "light";
+        img.src = "assets/" + dev + "_" + mode + ".png";
+        img.setAttribute("data-device", dev);
+        var label = dev === "iphone" ? "iPhone" : dev === "ipad" ? "iPad" : "Mac";
+        img.alt = "Muusa on " + label;
+      }
+
+      update();
+      darkQuery.addEventListener("change", update);
+    })();
+  </script>
+</body>
+</html>
