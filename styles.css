@@ -142,3 +142,60 @@ footer {
 }
 
 .contact:hover { background: var(--surface); }
+
+.legal {
+  margin: 20px 0 0;
+  font-size: 14px;
+}
+
+.legal a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.legal a:hover { text-decoration: underline; }
+
+/* Document pages (e.g. privacy) */
+.doc {
+  text-align: left;
+  max-width: 640px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back:hover { color: var(--text); }
+
+.page-title {
+  margin: 0 0 6px;
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.updated {
+  margin: 0 0 32px;
+  color: var(--muted);
+}
+
+.doc h2 {
+  margin: 34px 0 8px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.doc p { margin: 0 0 16px; }
+
+.doc a { color: var(--accent); }
+
+.doc ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.doc li { margin-bottom: 6px; }
